@@ -2,6 +2,7 @@
 - bag files are too large to upload, other files are here now.
 - I'm not able to see  map in Rviz by using the given launch file. I comment out the map_server line in launch file, if you have same issue you can try the following. 
 - Feel free to edit and make changes 
+- don't forget to change the address of waypoints file
 ---
 
 1. Comment out "Run map_server" related lines in bag_future_pose_estimation.launch
