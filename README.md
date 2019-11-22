@@ -19,4 +19,4 @@
 
      ---
 
-     TODO: Nodelets...
+     <s>TODO: Nodelets...</s>
