@@ -55,4 +55,4 @@ while not rospy.is_shutdown():
 	# Publish the MarkerArray
 	publisher.publish(markerArray)
 
-	rospy.sleep(5.0)
+	#rospy.sleep(5.0)

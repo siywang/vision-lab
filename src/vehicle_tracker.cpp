@@ -47,8 +47,6 @@ Pose_Estimator::Pose_Estimator(ros::NodeHandle &nh) {
 
     sub = nh.subscribe("/tag_detections", 10, &Pose_Estimator::FuturePoseCallback, this);
     pub_markers = nh.advertise<visualization_msgs::MarkerArray>("/pose_predictions", 10);
-
-
 }
 
 
@@ -168,20 +166,20 @@ float Pose_Estimator::Convert_to_Theta(const geometry_msgs::Quaternion msg) {
 void Pose_Estimator::PublishMarkers() {
     visualization_msgs::MarkerArray viz_msg;
     // perform calculations and predictions by the linear and pure pursuit model. put them in a visualization message and then
-    if (has_previous_pose) {
-
-        double dist_x = current_x - previous_pose.position.x;
-        double dist_y = current_y - previous_pose.position.y;
-        velocity = sqrt(pow(dist_x, 2) + pow(dist_y, 2)) * FREQ; // velocity = distance * (frequency)
-
-        previous_pose.position.x = current_x;
-        previous_pose.position.y = current_y;
-
-        has_previous_pose = true;
-    } else {
-        ROS_INFO_STREAM("No Previous Pose");
-        has_previous_pose = false;
-    }
+//    if (has_previous_pose) {
+//
+//        double dist_x = current_x - previous_pose.position.x;
+//        double dist_y = current_y - previous_pose.position.y;
+//        velocity = sqrt(pow(dist_x, 2) + pow(dist_y, 2)) * FREQ; // velocity = distance * (frequency)
+//
+//        previous_pose.position.x = current_x;
+//        previous_pose.position.y = current_y;
+//
+//        has_previous_pose = true;
+//    } else {
+//        ROS_INFO_STREAM("No Previous Pose");
+//        has_previous_pose = false;
+//    }
 
     //TODO: Keep velocity fixed ?
     velocity = 2.0; // Using fixed velocity gives better visualization

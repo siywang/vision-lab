@@ -37,7 +37,7 @@ private:
     vector<vector<float>> data_int;
 
     // weighted_model stuff
-    float alpha = 0.7;
+    float alpha = 0.8;
     float velocity = 0;
 
     float current_heading_angle = 0;
@@ -76,4 +76,3 @@ public:
 };
 
 #endif
-
