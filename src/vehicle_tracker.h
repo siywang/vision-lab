@@ -25,11 +25,14 @@ private:
     // pure purist stuff
     float waypoint_x = 0;
     float waypoint_y = 0;
+    vector<float> waypoint_data1;
+    vector<float> waypoint_data2;
+    vector<float> waypoint_data3;
 
     int last_index = -1;
     float rot_waypoint_x = 0;
     float rot_waypoint_y = 0;
-    float angle_factor = 0.1;
+    float angle_factor = 0.4;
     float steering_offset = -0.005;
     float steering_angle = 0;
     vector<vector<float>> waypoints;
@@ -37,7 +40,7 @@ private:
     vector<vector<float>> data_int;
 
     // weighted_model stuff
-    float alpha = 0.8;
+    float alpha = 0.7;
     float velocity = 0;
 
     float current_heading_angle = 0;
